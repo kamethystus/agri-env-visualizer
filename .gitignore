@@ -1,0 +1,11 @@
+# Firebase / Google 認証情報
+*.json
+.env
+sync-api/src/main/resources/
+dashboard/src/firebase.ts
+
+# IDEやビルド関連
+.idea/
+*.iml
+node_modules/
+build/
