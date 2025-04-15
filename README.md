@@ -8,9 +8,15 @@ React + TypeScriptで構築したダッシュボードでグラフ表示するIo
 
 ### 構成要素
 
-- **データ取得**：Raspberry Pi上のPythonスクリプトでセンサーデータを取得し、Googleスプレッドシートに一時保存
-- **データ転送API (sync-api)**：Spring Bootで構築したREST APIにより、GoogleスプレッドシートからFirebaseへデータを転送
-- **可視化ダッシュボード (dashboard)**：Firebase上のデータをReact + TypeScript + MUIで構築したUIで表示
+- **データ取得**（Raspberry Pi / Python）  
+  Raspberry Pi上で動作するPythonスクリプトにより、センサーデータを取得し、Googleスプレッドシートに一時保存します。
+
+- **データ転送API（sync-api / Spring Boot）**  
+  スプレッドシート上のデータをFirebaseに転送するAPIをSpring Bootで構築しています。
+
+- **可視化ダッシュボード（dashboard / React + TypeScript）**  
+  Firebaseに保存されたデータをもとに、React + TypeScript + MUIで構築したWeb UIでグラフ表示します。(画面キャプチャ参照)
+
 
 ---
 
@@ -43,3 +49,13 @@ React + TypeScriptで構築したダッシュボードでグラフ表示するIo
 
 - センサーやRaspberry Piなどの物理デバイスが必要です。
 - セキュリティのため、FirebaseやGoogle SheetsのAPIキー・認証ファイルを非公開にしています。
+
+---
+
+### 画面キャプチャ
+
+#### ダッシュボード全体
+![Image](https://github.com/user-attachments/assets/573fe833-7235-46d3-a2f5-99f0dd3f9f00)
+
+#### グラフのドットにカーソルを当てると値が表示されます（Rechartsの機能）。
+<img width="1676" alt="Image" src="https://github.com/user-attachments/assets/552d7391-ed6c-4608-819d-966358d6bff2" />
